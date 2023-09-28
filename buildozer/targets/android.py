@@ -318,6 +318,10 @@ class TargetAndroid(Target):
         buildops.checkbin('Cython (cython)', 'cython')
         buildops.checkbin('Java compiler (javac)', self.javac_cmd)
         buildops.checkbin('Java keytool (keytool)', self.keytool_cmd)
+        # platform build dependencies
+        buildops.checkbin('Automake aclocal macro (aclocal)', "aclocal")
+        buildops.checkbin('Libtool (libtool)', "libtool")
+        buildops.checkbin('Perl (perl)', "perl")
 
     def _p4a_have_aab_support(self):
         returncode = self._p4a(
