@@ -295,7 +295,7 @@ def cmd(
 
     if not quiet:
         LOGGER.debug("Run {0!r} ...".format(" ".join(command)))
-        LOGGER.debug("Cwd {}".format(cwd))
+        LOGGER.debug("Cwd {}".format(cwd if cwd else "."))
 
     process = Popen(
         command,
